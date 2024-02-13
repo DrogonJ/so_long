@@ -16,19 +16,21 @@ LIBFT		=	Libft/libft.a
 
 NAME		=	so_long
 
-FLAGS		=	-Wall -Wextra -Werror -g3
+FLAGS		=	
 
-MLX42		=	"/Users/ngalzand/goinfre/MLX42/libmlx42.a" -I include -lglfw -L "/Users/ngalzand/goinfre/.brew/opt/glfw/lib"
+MLX42		=	"./MLX42/build/libmlx42.a" -I include -lglfw
 
 RM			=	rm -rf
 
 .c.o:
-			gcc $(FLAGS) -I include -I /Users/ngalzand/goinfre/MLX42/include -c $< -o $(<:.c=.o)
+			gcc $(FLAGS) -I include -I ./MLX42/include -c $< -o $(<:.c=.o)
 
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
 			$(MAKE) -C Libft
+			cmake -B ./MLX42/build -S ./MLX42
+			cmake --build ./MLX42/build -j4
 			gcc $(FLAGS) $(OBJS) $(LIBFT) $(MLX42) -o $(NAME)
 clean:
 			$(RM) $(OBJS)

@@ -6,16 +6,16 @@
 /*   By: ngalzand <ngalzand@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 16:24:10 by ngalzand          #+#    #+#             */
-/*   Updated: 2022/12/06 10:32:01 by ngalzand         ###   ########.fr       */
+/*   Updated: 2024/02/13 11:32:19 by checkin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include "Libft/libft.h"
-# include "get_next_line/get_next_line.h"
-# include "/goinfre/ngalzand/MLX42/include/MLX42/MLX42.h"
+# include "./Libft/libft.h"
+# include "./get_next_line/get_next_line.h"
+# include "./MLX42/include/MLX42/MLX42.h"
 # include <fcntl.h>
 
 # define FRAMESPEED 10
